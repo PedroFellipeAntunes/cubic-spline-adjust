@@ -14,7 +14,7 @@ This project is a Java Maven application built using NetBeans IDE and Swing that
 
 ## **How to Use**
 
-1. **Execute the `.jar` file** located in the `/target` folder: `SplineColorAdjuster.jar`.
+1. **Execute the `.jar` file** located in the `/target` folder: `SplineAdjust.jar`.
 
 2. **Load an Image**:
    - Drag and drop an image into the interface.
