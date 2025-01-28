@@ -86,8 +86,6 @@ public class DrawingArea extends JPanel {
         // Control points
         int border = 3;
         
-        g2d.setColor(Color.WHITE);
-        
         for (Point2D.Double point : spline.getControlPoints()) {
             int screenX = (int) sc.convertValueSpace(0, 255, point.x, 0, width, false);
             int screenY = (int) sc.convertValueSpace(0, 255, point.y, 0, height, true);
@@ -95,7 +93,11 @@ public class DrawingArea extends JPanel {
             int x = screenX - this.POINT_RAIDUS;
             int y = screenY - this.POINT_RAIDUS;
             
+            g2d.setColor(Color.BLACK);
             g2d.fillOval(x, y, this.POINT_RAIDUS * 2, this.POINT_RAIDUS * 2);
+            
+            g2d.setColor(Color.WHITE);
+            g2d.drawOval(x, y, this.POINT_RAIDUS * 2, this.POINT_RAIDUS * 2);
             
             if (point.equals(this.selectedPoint)) {
                 g2d.drawOval(x - border, y - border, this.POINT_RAIDUS * 2 + border * 2, this.POINT_RAIDUS * 2 + border * 2);
